@@ -28,7 +28,7 @@ p {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
 		L.marker([39.9786671, -75.1600307]).addTo(map);</script>
-		var hugeDataset = {
+		L.marker (var hugeDataset = {
 		“type”    : “FeatureCollection”,
 		“features”: [{
   			"type": "Feature",
@@ -39,7 +39,7 @@ p {
     			"type": "Point",
     			"coordinates": [125.6, 10.1]
    }
-]};
+]});
 var coolLayer = L.geoJson().addTo(map);
 
 coolLayer.addData(hugeDataset);
