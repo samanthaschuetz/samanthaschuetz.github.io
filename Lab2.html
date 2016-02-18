@@ -2,8 +2,25 @@
 <head>
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<style>
+body {
+    background-color: #d0e4fe;
+}
+
+h1 {
+    color: green;
+    text-align: center;
+}
+
+p {
+    font-family: "Arial";
+    font-size: 20px;
+}
+</style>	
 </head>
 <body>
+	<h1>Samantha's Personal Story</h1>
+	<p>This is a map of Samantha's birthplaces, residences, schools and places of work.</p>
 	<div id='map' style="height:900px; width:1100px"></div>
 	<script>
 		var map = L.map('map').setView([43.3418655,-29.6933227], 4);
