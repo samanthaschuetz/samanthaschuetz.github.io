@@ -30,19 +30,25 @@ p {
 		var exampleFeature = 
 		
 		{
-    "type": "Feature",
-    "properties": {
-        "name": "Coors Field",
-        "amenity": "Baseball Stadium",
-        "popupContent": "This is where the Rockies play!"
-    },
+    "type":
        "geometry": {
         "type": "Point",
         "coordinates": [-104.99404, 39.75621]
     }
 };
 	L.geoJson(exampleFeature).addTo(map)
-	exampleFeature.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+
+
+
+L.geoJson(data, {
+    style: function (feature) {
+        return {color: feature.properties.color};
+    },
+    onEachFeature: function (feature, layer) {
+        layer.bindPopup(feature.properties.description);
+    }
+}).addTo(map);
+;
 	
 </script>
 		
