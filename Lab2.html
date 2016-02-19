@@ -6,12 +6,10 @@
 body {
     background-color: #d0e4fe;
 }
-
 h1 {
     color: green;
     text-align: center;
 }
-
 p {
     font-family: "Arial";
     font-size: 20px;
@@ -30,13 +28,19 @@ p {
 		var exampleFeature = 
 		
 		{
-    "type":
+    "type": "Feature",
+    "properties": {
+        "name": "Coors Field",
+        "amenity": "Baseball Stadium",
+        "popupContent": "This is where the Rockies play!"
+    },
        "geometry": {
         "type": "Point",
         "coordinates": [-104.99404, 39.75621]
     }
 };
-	L.geoJson(exampleFeature).addTo(map);
+	L.geoJson(exampleFeature).addTo(map)
+	exampleFeature.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 	
 </script>
 		
