@@ -28,23 +28,26 @@ p {
 		var FeatureCollection = 
 		
 		{
-    "type": "Feature",
+    "type": "FeatureCollection",
+    "features": [
+    {"type" : "Feature",
     "properties": {
         "name": "Holy Spirit Hospital",
         "amenity": "Hospital",
-        "popupContent": "This is where I was born!"
-    },
-       "geometry": {
+        "popupContent": "This is where I was born!" },
+    "geometry": {
         "type": "Point",
-        "coordinates": [-76.922288, 40.253134]
-    },"type": "Feature",
-    "properties": { "name": "First House, Center Drive",
+        "coordinates": [-76.922288, 40.253134]}
+        },
+        {"type": "Feature",
+    "properties": { 
+    	"name": "First House, Center Drive",
         "amenity": "Residence",
-        "popupContent": "This was my first home."
-    },
-       "geometry": {
+        "popupContent": "This was my first home." },
+    "geometry": {
         "type": "Point",
-        "coordinates": [-76.900671, 40.227168]
+        "coordinates": [-76.900671, 40.227168]}
+    }
 };
 	L.geoJson(FeatureCollection).addTo(map)
 	;
