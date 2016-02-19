@@ -25,21 +25,21 @@ p {
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
-		var exampleFeature = 
+		var FeatureCollection = 
 		
 		{
     "type": "Feature",
     "properties": {
-        "name": "Coors Field",
-        "amenity": "Baseball Stadium",
-        "popupContent": "This is where the Rockies play!"
+        "name": "Holy Spirit Hospital",
+        "amenity": "Hospital",
+        "popupContent": "This is where I was born!"
     },
        "geometry": {
         "type": "Point",
         "coordinates": [-76.922288, 40.253134]
     }
 };
-	L.geoJson(exampleFeature).addTo(map)
+	L.geoJson(FeatureCollection).addTo(map)
 	;
 	
 </script>
