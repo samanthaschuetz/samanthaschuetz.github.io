@@ -27,7 +27,7 @@ p {
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
-		var geojsonFeature = 
+		var exampleFeature = 
 		
 		{
     "type": "Feature",
@@ -41,7 +41,7 @@ p {
         "coordinates": [-104.99404, 39.75621]
     }
 };
-	L.geoJson(geojsonFeature).addTo(map);
+	L.geoJson(exampleFeature).addTo(map);
 	
 </script>
 		
