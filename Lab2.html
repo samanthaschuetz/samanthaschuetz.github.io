@@ -28,18 +28,18 @@ p {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
 		L.marker([39.9786671, -75.1600307]).addTo(map);</script>
-	<script>	var hugeDataset = {
-		“type” : “FeatureCollection”,
-		“features” : [{
-  			"type": "Feature",
-			 "properties": {
-			 "name": "Dinagat Islands"
-					 },
-			 "geometry": {
-    			"type": "Point",
-    			"coordinates": [125.6, 10.1]
-   }
-]};
+	<script>	var geojsonFeature = {
+    "type": "Feature",
+    "properties": {
+        "name": "Coors Field",
+        "amenity": "Baseball Stadium",
+        "popupContent": "This is where the Rockies play!"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-104.99404, 39.75621]
+    }
+};;
 var coolLayer = L.geoJson().addTo(map);
 
 coolLayer.addData(hugeDataset);</script>
