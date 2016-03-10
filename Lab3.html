@@ -26,6 +26,25 @@ p {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
 		
+		var myGeoJSON = {
+	‘type’ : ‘FeatureCollection’,
+	‘features’ : [
+		{'type':'Feature', 
+'properties':{
+'name':'myPlace1',
+‘caption’:'this is the body text',
+‘img’:’<img src=”http://link/to/source.jpg”/>’},
+'geometry':{'type':'Point','coordinates':[-75.1474139, 39.9816609]}},
+{'type':'Feature',
+ 'properties':{
+'name':'myPlace2',
+‘caption’:'this is ALSO the body text'
+‘img’:’<img src=”http://link/to/source.jpg”/>’},
+'geometry':{'type':'Point','coordinates':[-75.1474439, 39.9716709]}}
+
+	]};
+
+		
 		 hospital = L.marker([40.253134,-76.922288]).addTo(map)
 	            .bindPopup('<b>Holy Spirit Hospital</b> <small>Camp Hill, Pennsylvania</small><br> This is the hospital where I was born on March 17, 1994.  <img src= "http://media.pennlive.com/midstate_impact/photo/9783261-large.jpg"/> ');
 	              
