@@ -40,18 +40,17 @@ map.addLayer(Stamen_Terrain);
 function onEachFeature(feature, layer) {
            if (feature.properties && feature.properties.Name) {
         layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Caption + "<br>" + feature.properties.sitetype);
-								}	
-	
-					}
+}	
+			}
 		
-		var myGeoJSON = {
-	‘type’ : ‘FeatureCollection’,
-	‘features’ : [
+		var myGeoJSON = [
+	{"type": "FeatureCollection",
+  "features": [
 		{'type':'Feature', 
 			'properties':{
-			'name':'hospital',
+			'name':'<h3>Hospital</h3>',
+			‘img’: '<img src= 'http://media.pennlive.com/midstate_impact/photo/9783261-large.jpg'/>"
 			‘caption’:'<b>Holy Spirit Hospital</b> <small>Camp Hill, Pennsylvania</small><br> This is the hospital where I was born on March 17, 1994.'  ,
-			‘img’: '<img src= "http://media.pennlive.com/midstate_impact/photo/9783261-large.jpg"/>'},
 			'geometry':{'type':'Point','coordinates':[40.253134,-76.922288]}},
 			{'type':'Feature',
 			 'properties':{
